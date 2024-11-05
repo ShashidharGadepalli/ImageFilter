@@ -1,0 +1,6 @@
+#load the sample png and call it "landscape"
+load resources/sample-png.png landscape
+
+#brighten the sample ppm and call it "bright-landscape"
+brighten 45 landscape bright-landscape
+save landscape/bright-landscape.png bright-landscape

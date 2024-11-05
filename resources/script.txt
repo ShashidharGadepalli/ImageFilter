@@ -1,0 +1,71 @@
+
+#load the sample ppm and call it "landscape"
+load resources/sample-ppm.ppm landscape
+
+#load the sample png and call it "pngLandscape"
+load resources/sample-png.png pngLandscape
+
+#load the sample jpg and call it "jpgLandscape"
+load resources/sample-jpg.jpg jpgLandscape
+
+#brighten the sample ppm and call it "bright-landscape"
+brighten 45 landscape bright-landscape
+save landscape/bright-landscape.png bright-landscape
+
+#darken the sample p and call it "dark-landscape"
+brighten -45 landscape dark-landscape
+save landscape/dark-landscape.png dark-landscape
+
+#flip the sample png vertically and save to a jpg
+vertical-flip pngLandscape vertical-landscape
+save landscape/vertical-landscape.jpg vertical-landscape
+
+#flip the vertical jpg horizontally and save to a png
+horizontal-flip jpgLandscape horizontal-landscape
+save landscape/horizontal-landscape.png horizontal-landscape
+
+#create a greyscale using value component and call it landscape-value
+value-component landscape landscape-greyValue
+save landscape/landscape-greyValue.png landscape-greyValue
+
+#create a greyscale using luma-component and call it landscape-luma
+luma-component landscape landscape-luma
+save landscape/landscape-luma.png landscape-luma
+
+#create a greyscale using intensity-component and call it landscape-intensity
+intensity-component landscape landscape-intensity
+save landscape/landscape-intensity.png landscape-intensity
+
+#create a greyscale using red-component and call it landscape-red
+red-component landscape landscape-red
+save landscape/landscape-red.png landscape-red
+
+#create a greyscale using green-component and call it landscape-green
+green-component landscape landscape-green
+save landscape/landscape-green.png landscape-green
+
+#create a greyscale using blue-component and call it landscape-blue
+blue-component landscape landscape-blue
+save landscape/landscape-blue.png landscape-blue
+
+#Create a sepia image for landscape and call it landscape-sepia
+sepia landscape landscape-sepia
+save landscape/landscape-sepia.png landscape-sepia
+
+#create a blur the sample image and call it blur-landscape
+blur landscape blur-landscape
+save landscape/blur-landscape.png blur-landscape
+
+#sharpen the landscape and call it sharpen-landscape
+sharpen landscape sharpen-landscape
+save landscape/sharpen-landscape.png sharpen-landscape
+
+#split the landscape image into 3 red green and blue images
+rgb-split landscape landscape-redSplit landscape-greenSplit landscape-blueSplit
+save landscape/landscape-redSplit.png landscape-redSplit
+save landscape/landscape-blueSplit.png landscape-blueSplit
+save landscape/landscape-greenSplit.png landscape-greenSplit
+
+#combine all the rgb images to from the original landscape image
+rgb-combine combined landscape-redSplit landscape-greenSplit landscape-blueSplit
+save landscape/landscape-combined.ppm combined
