@@ -1,4 +1,4 @@
-# Assignment 4 Image Processing MVC Overview
+# Image Processing MVC Overview
 
 For the MVC Design, there are four main interfaces and classes (Model, View, Controller, and Photo) which represent the Model, View, Controller and Image respectively. There is also a Driver.java class where the program should run.
 
